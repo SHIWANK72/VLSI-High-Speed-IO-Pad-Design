@@ -26,3 +26,4 @@ The design process involved several critical considerations at the transistor le
 ## Key Learnings
 This project provided deep insights into the practical challenges of physical IC design, the importance of robust ESD protection strategies, and the trade-offs between speed, power, and area in VLSI.
 .
+.
