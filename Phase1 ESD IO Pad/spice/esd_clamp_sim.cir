@@ -1,0 +1,43 @@
+* ============================================
+* ESD Clamp (ggNMOS) - HBM 2kV Pulse Simulation
+* Simplified BSIM4 Model (LTSpice-native)
+* Shiwank Gupta | Nik-Coronics | Jul 2026
+*
+* NOTE: Sky130A raw PDK (.pm3.spice) is NOT natively
+* compatible with LTSpice's expression parser (nested
+* Monte-Carlo binned parameters using AGAUSS()/spectre-style
+* equations fail with "No such parameter defined").
+* This is a documented LTSpice limitation, not a file error.
+* A simplified BSIM4 model is used here for functional
+* validation. It does NOT capture true snapback/avalanche
+* breakdown - only basic conduction behavior.
+* ============================================
+
+.model sky130_esd_nmos NMOS
++ LEVEL=14 VERSION=4.5 TNOM=27
++ TOX=4.148e-9 TOXE=4.148e-9 TOXP=2.1e-9 TOXM=4.148e-9
++ VTH0=0.488 K1=0.5 K2=0.01
++ U0=350 VSAT=70000
++ RDSW=150
++ WINT=0 LINT=0
++ CGSO=1e-10 CGDO=1e-10 CJ=1e-3 CJSW=1e-10
+
+* --- HBM-style pulse source (0V -> 2000V) ---
+V1 nodeA 0 PULSE(0 2000 1n 1n 1n 150n 400n)
+
+* --- Pad capacitance ---
+C1 nodeA 0 100p
+
+* --- HBM series resistor -> Drain ---
+R1 nodeA drain 1.5k
+
+* --- ggNMOS ESD Clamp ---
+M1 drain 0 0 0 sky130_esd_nmos l=0.15u w=100u
+
+* --- Convergence helpers for steep 2kV pulse ---
+.options gmin=1e-10 reltol=0.01 itl4=100
+
+* --- Transient analysis ---
+.tran 0.5n 400n 0 0.5n uic
+
+.end

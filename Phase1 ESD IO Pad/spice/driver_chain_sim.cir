@@ -1,0 +1,56 @@
+* ============================================
+* Driver Chain - Tapered Inverter (4-stage), Standalone
+* Simplified BSIM4 Models (LTSpice-native)
+* Shiwank Gupta | Nik-Coronics | Jul 2026
+* ============================================
+
+.model sky130_esd_nmos NMOS
++ LEVEL=14 VERSION=4.5 TNOM=27
++ TOX=4.148e-9 TOXE=4.148e-9 TOXP=2.1e-9 TOXM=4.148e-9
++ VTH0=0.488 K1=0.5 K2=0.01
++ U0=350 VSAT=70000
++ RDSW=150
++ WINT=0 LINT=0
++ CGSO=1e-10 CGDO=1e-10 CJ=1e-3 CJSW=1e-10
+
+.model sky130_esd_pmos PMOS
++ LEVEL=14 VERSION=4.5 TNOM=27
++ TOX=4.148e-9 TOXE=4.148e-9 TOXP=2.1e-9 TOXM=4.148e-9
++ VTH0=-0.5 K1=0.5 K2=0.01
++ U0=175 VSAT=60000
++ RDSW=200
++ WINT=0 LINT=0
++ CGSO=1e-10 CGDO=1e-10 CJ=1e-3 CJSW=1e-10
+
+VDD vdd 0 DC 1.8
+
+* --- Input signal (fast digital edge, 1.8V logic) ---
+Vin in 0 PULSE(0 1.8 5n 0.1n 0.1n 10n 20n)
+
+* --- Stage 1 ---
+M1p n1 in vdd vdd sky130_esd_pmos l=0.15u w=1u
+M1n n1 in 0   0   sky130_esd_nmos l=0.15u w=0.5u
+
+* --- Stage 2 ---
+M2p n2 n1 vdd vdd sky130_esd_pmos l=0.15u w=3.5u
+M2n n2 n1 0   0   sky130_esd_nmos l=0.15u w=1.75u
+
+* --- Stage 3 ---
+M3p n3 n2 vdd vdd sky130_esd_pmos l=0.15u w=12u
+M3n n3 n2 0   0   sky130_esd_nmos l=0.15u w=6u
+
+* --- Stage 4 (final, drives pad) ---
+M4p pad n3 vdd vdd sky130_esd_pmos l=0.15u w=42u
+M4n pad n3 0   0   sky130_esd_nmos l=0.15u w=21u
+
+* --- Pad load: bond wire + PCB trace approximation ---
+Cload pad 0 5p
+
+.options gmin=1e-10 reltol=0.01
+.tran 0.05n 60n 0 0.05n uic
+
+* --- 10-90% rise/fall time measurement ---
+.meas tran trise TRIG V(pad) VAL=0.18 RISE=1 TARG V(pad) VAL=1.62 RISE=1
+.meas tran tfall TRIG V(pad) VAL=1.62 FALL=1 TARG V(pad) VAL=0.18 FALL=1
+
+.end
