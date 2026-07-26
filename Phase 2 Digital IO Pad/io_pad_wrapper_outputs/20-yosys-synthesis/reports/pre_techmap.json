@@ -1,0 +1,49 @@
+{
+   "creator": "Yosys 0.38 (git sha1 543faed9c8c, clang++ 17.0.6 -fPIC -Os)",
+   "invocation": "stat -json -liberty /content/openlane_run/tmp/33881565789d464e9760f78ff8b64b53.lib ",
+   "modules": {
+      "\\io_pad_wrapper": {
+         "num_wires":         31,
+         "num_wire_bits":     47,
+         "num_pub_wires":     18,
+         "num_pub_wire_bits": 34,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         31,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 13,
+            "$_AND_": 3,
+            "$_DFFE_PN0P_": 8,
+            "$_DFF_PN0_": 2,
+            "$_MUX_": 1,
+            "$_NAND_": 1,
+            "$_NOR_": 1,
+            "$_ORNOT_": 1,
+            "$_OR_": 1
+         }
+      }
+   },
+      "design": {
+         "num_wires":         31,
+         "num_wire_bits":     47,
+         "num_pub_wires":     18,
+         "num_pub_wire_bits": 34,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         31,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 13,
+            "$_AND_": 3,
+            "$_DFFE_PN0P_": 8,
+            "$_DFF_PN0_": 2,
+            "$_MUX_": 1,
+            "$_NAND_": 1,
+            "$_NOR_": 1,
+            "$_ORNOT_": 1,
+            "$_OR_": 1
+         }
+      }
+}
+

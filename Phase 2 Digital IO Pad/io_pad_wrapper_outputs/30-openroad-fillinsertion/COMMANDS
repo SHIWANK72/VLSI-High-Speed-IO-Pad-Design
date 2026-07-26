@@ -1,0 +1,1 @@
+openroad -exit -no_splash -metrics /content/openlane_run/30-openroad-fillinsertion/or_metrics_out.json /content/openlane_ipynb/openlane/scripts/openroad/fill.tcl

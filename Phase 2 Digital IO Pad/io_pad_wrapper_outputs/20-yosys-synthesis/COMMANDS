@@ -1,0 +1,1 @@
+yosys -c /content/openlane_ipynb/openlane/scripts/yosys/synthesize.tcl

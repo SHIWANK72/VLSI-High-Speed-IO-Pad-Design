@@ -1,0 +1,49 @@
+{
+   "creator": "Yosys 0.38 (git sha1 543faed9c8c, clang++ 17.0.6 -fPIC -Os)",
+   "invocation": "stat -json -liberty /content/openlane_run/tmp/33881565789d464e9760f78ff8b64b53.lib ",
+   "modules": {
+      "\\io_pad_wrapper": {
+         "num_wires":         32,
+         "num_wire_bits":     48,
+         "num_pub_wires":     18,
+         "num_pub_wire_bits": 34,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         33,
+         "area":              472.953600,
+         "num_cells_by_type": {
+            "sky130_fd_sc_hd__a22o_2": 2,
+            "sky130_fd_sc_hd__and2_2": 8,
+            "sky130_fd_sc_hd__and2b_2": 1,
+            "sky130_fd_sc_hd__buf_2": 1,
+            "sky130_fd_sc_hd__dfrtp_2": 10,
+            "sky130_fd_sc_hd__mux2_1": 9,
+            "sky130_fd_sc_hd__nor2_2": 1,
+            "sky130_fd_sc_hd__or3b_2": 1
+         }
+      }
+   },
+      "design": {
+         "num_wires":         32,
+         "num_wire_bits":     48,
+         "num_pub_wires":     18,
+         "num_pub_wire_bits": 34,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         33,
+         "area":              472.953600,
+         "num_cells_by_type": {
+            "sky130_fd_sc_hd__a22o_2": 2,
+            "sky130_fd_sc_hd__and2_2": 8,
+            "sky130_fd_sc_hd__and2b_2": 1,
+            "sky130_fd_sc_hd__buf_2": 1,
+            "sky130_fd_sc_hd__dfrtp_2": 10,
+            "sky130_fd_sc_hd__mux2_1": 9,
+            "sky130_fd_sc_hd__nor2_2": 1,
+            "sky130_fd_sc_hd__or3b_2": 1
+         }
+      }
+}
+

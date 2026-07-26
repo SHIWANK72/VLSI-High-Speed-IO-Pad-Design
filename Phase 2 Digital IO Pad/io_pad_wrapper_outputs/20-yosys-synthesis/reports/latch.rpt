@@ -1,0 +1,3 @@
+
+14. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\io_pad_wrapper.\reg_rdata' from process `\io_pad_wrapper.$proc$./io_pad_wrapper.v:84$5'.

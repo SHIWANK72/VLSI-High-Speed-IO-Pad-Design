@@ -1,0 +1,1 @@
+netgen -batch source /content/openlane_run/36-netgen-lvs/lvs_script.lvs

@@ -1,0 +1,1 @@
+magic -dnull -noconsole -rcfile /root/.volare/sky130A/libs.tech/magic/sky130A.magicrc /content/openlane_ipynb/openlane/scripts/magic/wrapper.tcl

@@ -1,0 +1,23 @@
+61. Printing statistics.
+
+=== io_pad_wrapper ===
+
+   Number of wires:                 32
+   Number of wire bits:             48
+   Number of public wires:          18
+   Number of public wire bits:      34
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 33
+     sky130_fd_sc_hd__a22o_2         2
+     sky130_fd_sc_hd__and2_2         8
+     sky130_fd_sc_hd__and2b_2        1
+     sky130_fd_sc_hd__buf_2          1
+     sky130_fd_sc_hd__dfrtp_2       10
+     sky130_fd_sc_hd__mux2_1         9
+     sky130_fd_sc_hd__nor2_2         1
+     sky130_fd_sc_hd__or3b_2         1
+
+   Chip area for module '\io_pad_wrapper': 472.953600
+

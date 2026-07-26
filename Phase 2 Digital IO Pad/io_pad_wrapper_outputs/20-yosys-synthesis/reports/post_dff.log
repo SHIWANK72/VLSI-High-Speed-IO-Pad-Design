@@ -1,0 +1,31 @@
+53. Printing statistics.
+
+=== io_pad_wrapper ===
+
+   Number of wires:                 39
+   Number of wire bits:             55
+   Number of public wires:          18
+   Number of public wire bits:      34
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 39
+     $_ANDNOT_                      13
+     $_AND_                          3
+     $_MUX_                          9
+     $_NAND_                         1
+     $_NOR_                          1
+     $_ORNOT_                        1
+     $_OR_                           1
+     sky130_fd_sc_hd__dfrtp_2       10
+
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_NAND_ is unknown!
+   Area for cell type $_OR_ is unknown!
+   Area for cell type $_NOR_ is unknown!
+   Area for cell type $_ANDNOT_ is unknown!
+   Area for cell type $_ORNOT_ is unknown!
+   Area for cell type $_MUX_ is unknown!
+
+   Chip area for module '\io_pad_wrapper': 262.752000
+
