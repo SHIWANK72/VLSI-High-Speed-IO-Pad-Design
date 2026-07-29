@@ -1,0 +1,133 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "reg_rdata[0]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_rdata[1]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_rdata[2]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_rdata[3]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_rdata[4]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_rdata[5]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_rdata[6]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_rdata[7]",
+					"strict" : false
+				},
+				{
+					"name" : "core_din",
+					"strict" : false
+				},
+				{
+					"name" : "pad_oe",
+					"strict" : false
+				},
+				{
+					"name" : "pad_pu_en",
+					"strict" : false
+				},
+				{
+					"name" : "pad_pd_en",
+					"strict" : false
+				},
+				{
+					"name" : "pad_slew[0]",
+					"strict" : false
+				},
+				{
+					"name" : "pad_slew[1]",
+					"strict" : false
+				},
+				{
+					"name" : "pad_schmitt_en",
+					"strict" : false
+				},
+				{
+					"name" : "pad_dout",
+					"strict" : false
+				},
+				{
+					"name" : "reg_addr[1]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_addr[0]",
+					"strict" : false
+				},
+				{
+					"name" : "pad_din_raw",
+					"strict" : false
+				},
+				{
+					"name" : "core_dout",
+					"strict" : false
+				},
+				{
+					"name" : "reg_wdata[0]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "rst_n",
+					"strict" : false
+				},
+				{
+					"name" : "reg_we",
+					"strict" : false
+				},
+				{
+					"name" : "reg_wdata[1]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_wdata[2]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_wdata[3]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_wdata[4]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_wdata[5]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_wdata[6]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_wdata[7]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
